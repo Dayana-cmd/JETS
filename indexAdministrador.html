@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JETS</title>
+  <!-- External -->
+  <link rel="stylesheet" href="./external/css/gijgo.min.css">
+  <link rel="stylesheet" href="./external/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./external/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./external/css/bootstrap-reboot.min.css">
+
+  <!-- JETS -->
+  <link rel="stylesheet" href="./css/principal.css">
+  <link rel="stylesheet" href="./css/cuentaRegresiva.css">
+  <link rel="stylesheet" href="./css/loader.css">
+  <!-- <link rel="stylesheet" href="./css/cronograma.css"> -->
+  <!-- Jquery -->
+  <script src="./external/js/jquery-3.4.1.min.js"></script>
+  <!-- jspdf nesesario -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.0.2/base64.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  
+</head>
+
+<body>
+  <div class="loader-page"></div>
+  <header>
+    <ol class="breadcrumb">
+      <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <!-- <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol> -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/Arte 3.jpg" class="d-block w-100 video" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./img/Arte 1.jpg" class="d-block w-100 video" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </ol>
+  </header>
+
+  <main>
+    <div id="clock"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 separacion">
+          <div class="card text-white bg-secondary card-button" id="speaker">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/2.png" alt="" srcset="">
+              </div>
+              <p class="card-text car-flex">SPEAKER</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4 separacion">
+          <div class="card text-white bg-secondary card-button reg" data-toggle="modal" data-target="#registro">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/1.png" alt="" srcset="">
+              </div>
+              <p class="card-text car-flex">REGISTRO</p>
+            </div>
+            <span id="totalreg" class="badge badge-danger badge-down">0</span>
+          </div>
+        </div>
+        <div class="col-4 separacion">
+          <div class="card text-white bg-secondary card-button reg" data-toggle="modal" data-target="#crearCuenta">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/3.png" alt="" srcset="">
+              </div>
+              <p class="card-text car-flex">CREAR</p>
+            </div>
+            <span id="totalcre" class="badge badge-danger badge-down" >0</span>
+          </div>
+        </div>
+        <div class="col-4 separacion">
+          <div class="card text-white bg-secondary card-button reg" id="cronograma">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/cronograma.png" alt="" srcset=""></a>
+              </div>
+              <p class="card-text car-flex">CRONOGRAMA</p>
+            </div>
+            <span class="badge badge-danger badge-down">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4 separacion">
+          <div class="card text-white bg-secondary card-button reg" data-toggle="modal" data-target="#material">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/Materiales.png" alt="" srcset="">
+              </div>
+              <p class="card-text car-flex">POLERAS</p>
+            </div>
+            <span id="totalreg" class="badge badge-danger badge-down">0</span>
+          </div>
+        </div>
+        <div class="col-4 separacion">
+          <div class="card text-white bg-secondary card-button reg" id="reportes">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/Informe.png" alt="" srcset="">
+              </div>
+              <p class="card-text car-flex">REPORTES</p>
+            </div>
+            <span id="totalreg" class="badge badge-danger badge-down">0</span>
+          </div>
+        </div>
+        <div class="col-4 separacion">
+          <div class="card text-white bg-secondary card-button reg" id="feria">
+            <div class="card-body">
+              <div class="car-flex">
+                <img class="icon" src="./external/icons/feria.png" alt="" srcset="">
+              </div>
+              <p class="card-text car-flex">FERIA</p>
+            </div>
+            <span id="totalreg" class="badge badge-danger badge-down ">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">REGISTRO</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="salir">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <div class="flex-2">
+                      <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                      
+                  </div> -->
+
+            <form>
+              <div class="form-row ">
+                <div class="col-6 separacion">
+                  <button type="button" id="scan" class="btn btn-warning btn-full-width">Escanear</button>
+                </div>
+                <div class="col-6 separacion">
+                  <input type="text" class="form-control" id="digitos" placeholder="Registro o CI">
+                </div>
+                <div class="col-12 separacion">
+                  <button type="button" id="verificar" class="btn btn-primary form-control">Verificar</button>
+                </div>
+              </div>
+              <span aria-hidden="true">&times;</span>
+
+              <div class="form-row">
+                <div class="col-12">
+                  <h4 class="car-flex" id="txtRegistro">Registrado: No</h4>
+                </div>
+              </div>
+              <span aria-hidden="true">&times;</span>
+
+              <div class="form-row " id="datos">
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Nombre: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="Nombre" disabled="">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Paterno: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="Apellido Paterno" disabled="">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Materno: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="Apellido Materno" disabled="">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">CI: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="CI" disabled="">
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="">
+            <div class="form-row separacion">
+              <div class="col-12 separacion ">
+                <button type="button" id="credencial" class="btn btn-primary btn-full-width ">Credencial</button>
+              </div>
+              <div class="col-6 separacion">
+                <button type="button" class="btn btn-secondary btn-full" data-dismiss="modal" id="cancel">Cancelar</button>
+
+              </div>
+              <div class="col-6 separacion">
+                <button type="button" id="reg" class="btn btn-primary btn-full">Registrar</button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="crearCuenta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">REGISTRO</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <div class="flex-2">
+                      <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                      
+                  </div> -->
+
+            <form>
+              <div class="form-row">
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Nombre:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" id="name" autocomplete="off" placeholder="Nombre" >
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Paterno:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="etextmail" class="form-control" id="paterno" autocomplete="off" placeholder="Apellido Paterno" >
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Materno:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" id="materno" autocomplete="off" placeholder="Apellido Materno" >
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Genero:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="M" name="customRadio" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="M">Masculino</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="F" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="F">Femenino</label>
+                  </div>
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">CI:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="number" class="form-control" id="ci" autocomplete="off" placeholder="CI">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Fecha:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input id="datepicker" />
+                </div>
+
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Telefono:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="number" class="form-control" id="phone" autocomplete="off" placeholder="Telefono">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Email</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="email" class="form-control" id="email" autocomplete="off" placeholder="Email">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Tipo</label>
+                </div>
+                <div class="col-9 separacion">
+                  <select class="custom-select" id="tipo" data-target="#participante" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    <option value="11" selected="" disabled>Tipo de Usuario</option>
+                    <option value="1">Estudiante</option>
+<<<<<<< HEAD
+                    <option value="4">Invitado</option>
+                    <option value="5">Externo</option>
+                    <option value="6">Conferencista</option>
+                    <option value="7">Jurado</option>
+                    <option value="3">Vip</option>
+                    <option value="9">Jefe de Carrera</option>
+                    <option value="8">Staff</option>
+                    <option value="10">Administrador</option>
+=======
+                    <option value="2">No Estudiante</option>
+                    <option value="6">Invitado</option>
+                    <option value="7">Conferenciasta</option>
+                    <option value="3">Jurado</option>
+                    <option value="5">Jefe de Carrera</option>
+                    <option value="4">Staff</option>
+                    <option value="9">Team Power</option>
+                    <!-- <option value="8">Administrador</option> -->
+>>>>>>> 483dc0bde21fc6228056298d3ac86bd436c2ce0e
+                  </select>
+                </div>
+              </div>
+              <div class="collapse form-row " id="participante">
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Registro:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" id="registroregistroEstudiante" autocomplete="off" placeholder="Registro">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Carrera:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <select class="custom-select" id="tipo" data-target="#participante" aria-expanded="false"
+                  aria-controls="collapseExample">
+                  <option value="1110" selected="" disabled>Carrera</option>
+                  <option value="4">ING. EN MARKETING Y PUBLICIDAD</option>
+                  <option value="6">ING. MECANICA AUTOMOTRIZ Y AGROINDUSTRIAL</option>
+                  <option value="8">ING. ELECTRONICA Y SISTEMA</option>
+                  <option value="10">AUDITORIA FINANCIRA</option>
+                  <option value="12">ADMINISTRACION GENERAL</option>
+                  <option value="14">ING. INDUSTRIAL Y COMERCIAL</option>
+                  <option value="16">DERECHO</option>
+                  <option value="20">ADMINISTRACION DE TURISMO</option>               
+                  <option value="22">COMERCIO INTERNACIONAL</option>               
+                  <option value="26">ADMINISTRACION FINANCIERA</option>               
+                  <option value="28">ING. COMERCIAL</option>               
+                  <option value="30">ING. EN REDES Y TELECOMUNICACIONES</option>               
+                  <option value="32">ING. EN ADMINISTRACION PETROLERA</option>               
+                  <option value="34">ING. INFORMATICA Y SISTEMAS ADMINISTRATIVOS</option>               
+                  <option value="44">RELACIONES INTERNACIONALES</option>               
+                  <option value="46">ING. SISTEMAS</option>               
+                  <option value="50">CONTADURIA PUBLICA</option>               
+                  <option value="53">ING. FINANCIERA</option>               
+                  <option value="54">ING ELECTRONICA</option>               
+                  <option value="55">COMUNICACION ESTRATEGICA Y DIGITAL</option>               
+                  <option value="56">PSICOLOGIA</option>               
+                  <option value="512">ADMINISTRACION GENERAL</option>               
+                  <option value="528">ING. COMERCIAL</option>               
+                  <option value="550">CONTADURIA PUBLICA</option>               
+                  <option value="553">ING. FINANCIERA</option>               
+                  <option value="555">COMUNICACION ESTRATEGICA Y DIGITAL</option>               
+                 </div>
+              </div>
+              <div class="collapse form-row " id="noParticipante">
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Descrip:</label>
+                </div>
+                <div class="col-9 separacion">
+                  <textarea class="form-control" id="descripcion" autocomplete="off" rows="2" style="margin-top: 0px; margin-bottom: 0px; "
+                    placeholder="Descripcion"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer ">
+            <button type="button" class="btn btn-secondary btn-2" id="cancelar-Cuenta" data-dismiss="modal">Cancelar</button>
+            <button type="button" id="crear" class="btn btn-primary btn-2">Crear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="material" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">POLERAS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeM">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row ">
+                <div class="col-6 separacion">
+                  <button type="button" id="scanM" class="btn btn-warning btn-full-width">Escanear</button>
+                </div>
+                <div class="col-6 separacion">
+                  <input type="text" class="form-control" id="digitosM" autocomplete="off" placeholder="Registro o CI">
+                </div>
+                <div class="col-12 separacion">
+                  <button type="button" id="verificarM" class="btn btn-primary form-control">Verificar</button>
+                </div>
+                <span aria-hidden="true">&times;</span>
+                <div class="col-12 separacion">
+                  <select name="" id="conceptos" class="form-control">
+<<<<<<< HEAD
+                    <option value="">Seleccione La Entrega</option>
+=======
+                    <option  value="" selected="" disabled>Seleccione La Entrega</option>
+>>>>>>> 483dc0bde21fc6228056298d3ac86bd436c2ce0e
+                    <option value="Polera">Polera</option>
+                    <option value="Cronograma y Lapicero">Cronograma y Lapicero</option>
+                    <option value="Todo">Todo</option>
+                  </select>
+                </div>
+                <span aria-hidden="true">&times;</span>
+                <div class="col-12 separacion">
+                  <select name="" id="talla" class="form-control">
+                    <option value="" selected="" disabled >Seleccione La Talla</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="P">P</option>
+                    <option value="S">S</option>
+                    <option value="X">X</option>
+                    <option value="XS">XS</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                    <option value="XXXL">XXXL</option>
+                  </select>
+                </div>
+                <span aria-hidden="true">&times;</span>
+
+                <div class="col-12 separacion">
+                    <button type="button" id="Entregas" class="btn btn-primary form-control">Fechas</button>
+                </div>
+              </div>
+              <span aria-hidden="true">&times;</span>
+
+              <div class="form-row " id="datosM">
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Nombre: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="Nombre" disabled="">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Paterno: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="Apellido Paterno" disabled="">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">Materno: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="Apellido Materno" disabled="">
+                </div>
+                <div class="col-3 separacion">
+                  <label for="name" class="col-form-label">CI: </label>
+                </div>
+                <div class="col-9 separacion">
+                  <input type="text" class="form-control" placeholder="CI" disabled="">
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer ">
+            <button type="button" class="btn btn-secondary btn-2" data-dismiss="modal" id="cancelM">Cancelar</button>
+            <button type="button" id="regM" class="btn btn-primary btn-2">Entregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./external/js/bootstrap.bundle.min.js"></script>
+  <script src="./external/js/gijgo.min.js"></script>
+  <script src="./external/js/sweetalert2@8.js"></script>
+  <!-- Principal -->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="./js/reporte/qrcode.js"></script>
+  <script src="./js/scanner.js"></script>
+  <script src="./js/conexion/conexion.js"></script>
+  <script src="../js/mod1/pdfCordova.js"></script>
+
+  <script src="./js/mod1/interface.js"></script>
+  <script src="./js/mod1/app.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/mod2/crear.js"></script>
+  <script src="./js/mod2/app_crear.js"></script>
+
+  <script src="./js/mod3/interfaceM.js"></script>
+  <script src="./js/mod3/appM.js"></script>
+
+
+  <script src="./js/app.js"></script>
+
+  <script src="./js/principal.js"></script>
+  <script src="./js/verificacionMostrar.js"></script>
+
+</body>
+
+</html>

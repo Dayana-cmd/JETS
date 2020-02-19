@@ -1,0 +1,134 @@
+:root {
+    --color-titulos:rgba(207, 10, 44, 1);
+    --color-fondo: rgba(85, 87, 89, 1);
+    --color-cards: rgba(139, 141, 141, 1);
+    --separacion-nav: 1rem;
+    --separacion-margenes: 1rem;
+    --border-radius: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+    background-image: url(../img/fondo.jpg);
+    background-size: contain;   
+}
+
+header {
+    margin-bottom: 4.5rem;
+}
+
+.card-speaker {
+    margin-bottom: 1rem;
+    background-color: var(--color-cards);
+    box-shadow: 0px 5px 10px -5px  rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.card-speaker:active {
+    box-shadow: none;
+    text-shadow: 1px 1px 6px rgb(255, 255, 255);
+    top: 2px;
+    left: 2px;
+}
+
+.container-nav {
+    margin: var(--separacion-nav) var(--separacion-margenes) 0 var(--separacion-margenes);
+}
+
+.speaker {
+    /* border-radius: var(--border-radius); */
+    
+}
+
+.hover-card {
+    padding: 0;
+    display: flex;
+}
+
+.img-card {
+    height: 9rem;
+    width: 100%;
+    border-radius: 10px 0 0 10px; 
+    /* border-radius: var(--border-radius); */
+    /* box-shadow: 0px 5px 10px -5px  rgba(0, 0, 0, 0.8); */
+}
+
+.informacion-speaker{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.card-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-3{
+    color: #ffffff;
+}
+
+.fondo{
+    color: var(--color-fondo);
+}
+.card-button {
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px -5px  rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    background-color: var(--color-fondo) ;
+}
+
+.card-button:active {
+    box-shadow: none;
+    text-shadow: 1px 1px 6px #fff;
+    top: 2px;
+    left: 2px;
+}
+
+.boton{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.inscribir{
+    background-color: var(--color-titulos);
+}
+.encuesta{
+    background-color: var(--color-fondo);
+}
+.modal-img{
+    height: 16rem;
+    width: 100%;
+}
+#encuesta{
+    background-color: rgba(85, 87, 89, 1);;
+    border-color: rgba(85, 87, 89, 1);
+}
+#inscribir{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+}
+#reg{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+}
+#verificar{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+    margin-top: 7px;
+}
+#scan{
+    background-color: rgba(85, 87, 89, 1);
+    border-color: rgba(85, 87, 89, 1);
+}
+
+.btn-full {
+    width: 100%;
+}

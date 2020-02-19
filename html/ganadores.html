@@ -1,0 +1,178 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- External -->
+    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+    <!-- JETS -->
+    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/cronograma.css">
+    <!-- Jquery -->
+    <script src="../external/js/jquery-3.4.1.min.js"></script>
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.0.2/base64.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  
+  </head>
+  
+  <body>
+    <div class="loader-page"></div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">JETS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+          aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="../indexAdministrador.html">Inicio <span class=" sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Speaker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+  <br>
+  <br>
+
+    <table>
+        <br>
+      <tr class="temas">
+      <center>
+      <p class="fechas">GANADORES</p>
+      </center>
+      </tr>
+    </table>
+     
+    </header>
+  
+    <main>
+        <center>
+            <table>
+              <br>
+            <tr class="temas">
+            <p class="fechas">jurado 1</p>
+              <td><b>equipo</b></td>
+              <td><b>calificación</b></td>
+            </tr>
+            <tr class="fila1">     
+              <td>' '</td>
+              <td></td>
+            </tr>
+            <tr class="fila2">
+              <td>' '</td>
+              <td></td> 
+            </tr>
+            <tr class="fila1">
+              <td>' '</td>
+              <td></td> 
+            </tr>
+       </table> 
+       
+       <table>
+            <br>
+          <tr class="temas">
+          <p class="fechas">jurado 2</p>
+          <td><b>equipo</b></td>
+            <td><b>calificación</b></td>
+          </tr>
+          <tr class="fila1">     
+            <td>' '</td>
+            <td></td>
+          </tr>
+          <tr class="fila2">
+            <td>' '</td>
+            <td></td> 
+          </tr>
+          <tr class="fila1">
+            <td>' '</td>
+            <td></td> 
+          </tr>
+     </table>
+
+     <table>
+            <br>
+          <tr class="temas">
+          <p class="fechas">jurado 3</p>
+          <td><b>equipo</b></td>
+            <td><b>calificación</b></td>
+          </tr>
+          <tr class="fila1">     
+            <td>' '</td>
+            <td></td>
+          </tr>
+          <tr class="fila2">
+            <td>' '</td>
+            <td></td> 
+          </tr>
+          <tr class="fila1">
+            <td>' '</td>
+            <td></td> 
+          </tr>
+     </table>
+
+     <table>
+            <br>
+          <tr class="temas">
+          <p class="fechas">jurado 4</p>
+          <td><b>equipo</b></td>
+            <td><b>calificación</b></td>
+          </tr>
+          <tr class="fila1">     
+            <td>' '</td>
+            <td></td>
+          </tr>
+          <tr class="fila2">
+            <td>' '</td>
+            <td></td> 
+          </tr>
+          <tr class="fila1">
+            <td>' '</td>
+            <td></td> 
+          </tr>
+     </table>
+  </center>
+    </main>
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <script src="../external/js/gijgo.min.js"></script>
+    <script src="../external/js/sweetalert2@8.js"></script>
+    <!-- Principal -->
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script src="../js/principal.js"></script>
+  
+  
+    <script src="../js/conexion/conexion.js"></script>
+    <script src="../js/mod1/pdfCordova.js"></script>
+    <script src="../js/reporte/qrcode.js"></script>
+  
+    <script src="../js/reporte/generalQr.js"></script>
+    <script src="../js/reporte/certificados.js"></script>
+  
+    <script>
+      document.querySelector('#reporte-estadistico').addEventListener('click', function(){
+        location.href = "./estadistica.html"
+      })
+    </script>
+  </body>
+  
+  </html>

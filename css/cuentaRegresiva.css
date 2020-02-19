@@ -1,0 +1,43 @@
+:root {
+    --height-a : 60px;
+    --width-a : 60px;
+
+        --color-titulos:rgba(207, 10, 44, 1);
+        --color-fondo: rgba(85, 87, 89, .5);
+        --color-cards: rgba(139, 141, 141, 1);
+}
+
+[class^="time-"] {
+    height: var(--height-a);
+    width: var(--width-a);
+    background-color: var(--color-fondo);
+    color: white;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 0 2px 2px rgba(110, 92, 92, 0.7);
+    z-index: -1;
+}
+
+[class^="flex-center"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.time-literal {
+    height: var(--height-a);
+    width: var(--width-a);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    align-items: flex-start;
+    box-shadow: none;
+}

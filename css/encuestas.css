@@ -1,0 +1,154 @@
+:root {
+    --color-titulos:rgba(207, 10, 44, 1);
+    --color-fondo: rgba(85, 87, 89, 1);
+    --color-cards: rgba(139, 141, 141, 1);
+    --separacion-nav: 1rem;
+    --separacion-margenes: 1rem;
+    --border-radius: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+    /* background-image: url(../img/Arte\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    background-image: url(../img/fondo.jpg);
+    /* background-color: var(--color-fondo) !important; */
+    background-repeat: repeat-y;
+    background-size: 100% 100%;           
+}
+
+@media (max-width: 1024px) { 
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-size: contain;
+    }
+}
+
+.medio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pregunta {
+    color: rgb(255, 255, 255);   
+    font-size: 1.5rem ;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.pregunta-numero {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+
+}
+
+.signos {
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+}
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+ 
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.estre {
+  color: grey;
+  font-size: 3rem;
+  padding: .5rem;   
+  margin-bottom: -2rem;
+}
+
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+estre:hover,
+estre:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+#encuesta {
+    margin: -.5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, .8)
+}
+.estre {
+    display: flex;
+    flex-direction: column;
+}
+
+[class^=miniLetas] {
+    color: rgba(253, 253, 253, .8);
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 .4rem;
+    text-align: center;
+}
+
+.miniLetas-clasificaicon {
+    margin-left: 1.8rem;
+}
+
+.miniLetas-fijo {
+    width: 2.5rem;
+} 
+
+
+
+.footer-card {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.no-mostrar {
+    display: none
+}
+
+.btn-mid {
+  width: 50%;
+  margin-right: .2rem;
+}

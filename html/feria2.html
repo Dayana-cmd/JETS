@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JETS</title>
+    <!-- External -->
+    <link rel="stylesheet" href="../external/css/gijgo.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+
+    <!-- JETS -->
+    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/feria.css">
+    <link rel="stylesheet" href="../css/feria3.css">
+    <link rel="stylesheet" href="../css/calificacion.css">
+    <!-- <link rel="stylesheet" href="./css/cronograma.css"> -->
+    <!-- Jquery -->
+    <script src="../external/js/jquery-3.4.1.min.js"></script>
+    <!-- jspdf nesesario -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.0.2/base64.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">FERIA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../indexAdministrador.html"">Inicio <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Speaker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title">Calificaciones</h4>
+                    <div class="ml-auto text-right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="form-group row">
+                    <div class="container" id="rubrica" style="display: block;">
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-6 col-md-6 col-lg-6 col-xlg-6" id="n14">
+                                <div class="card text-white bg-secondary card-button reg" data-toggle="modal"
+                                    data-target="#emprende">
+                                    <div class="card-body">
+                                        <div class="car-flex">
+                                            <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                        </div>
+                                        <p class="card-text car-flex">EMPRENDIMIENTO</p>
+                                    </div>
+                                    <span id="espacio" aria-hidden="true">&times;</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-6 col-xlg-6" id="n15">
+                                <div class="card text-white bg-secondary card-button reg" data-toggle="modal"
+                                    data-target="#costo">
+                                    <div class="card-body">
+                                        <div class="car-flex">
+                                            <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                        </div>
+                                        <p class="card-text car-flex">COSTO Y BENEFICIO</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-6 col-xlg-6" id="n16">
+                                <div class="card text-white bg-secondary card-button reg" data-toggle="modal"
+                                    data-target="#soluciones">
+                                    <div class="card-body">
+                                        <div class="car-flex">
+                                            <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                        </div>
+                                        <p class="card-text car-flex">SOLUCIONES SIMILARES</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-6 col-xlg-6" id="n17">
+                                <div class="card text-white bg-secondary card-button reg" data-toggle="modal"
+                                    data-target="#competencia">
+                                    <div class="card-body">
+                                        <div class="car-flex">
+                                            <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                        </div>
+                                        <p class="card-text car-flex">COMPETENCIA</p>
+                                    </div>
+                                    <span id="espacio" aria-hidden="true">&times;</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-xlg-12" id="n18">
+                                <div class="card text-white bg-secondary card-button reg" data-toggle="modal"
+                                    data-target="#modelo">
+                                    <div class="card-body">
+                                        <div class="car-flex">
+                                            <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                        </div>
+                                        <p class="card-text car-flex">MODELO DE NEGOCIO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4 text-center " id="guardar" style="display: block">
+
+                <div data-role="main" class="ui-content ">
+
+                    <p>
+                        <a style="text-decoration: none" id="guardar"><button
+                                class="btn btn-warning btn-lg btn-flex-medio">Guardar</button></a>
+                    </p>
+
+                </div>
+            </div>
+            <!-- <button>Guardar</button> -->
+
+            <div class="modal fade" id="emprende" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">EMPRENDIMIENTO
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-titulo">
+                                Criterio
+                            </div>
+                            <div class="modal-texto">
+                                La propuesta se presenta como una oportunidad viable de emprendimiento que puede ser financiada economicamente.
+                            </div>
+                            <fieldset >
+                                <p class="clasificacion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <!--
+                                    --><label class="estre" for="radio1">★</label>
+                                    <!--
+                                    --><input id="radio2" type="radio" name="estrellas" value="4">
+                                    <!--
+                                    --><label class="estre" for="radio2">★</label>
+                                    <!--
+                                    --><input id="radio3" type="radio" name="estrellas" value="3">
+                                    <!--
+                                    --><label class="estre" for="radio3">★</label>
+                                    <!- --><input id="radio4" type="radio" name="estrellas" value="2">
+                                        <!--
+                                    --><label class="estre" for="radio4">★</label>
+                                        <!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1">
+                                        <!--
+                                    --><label class="estre" for="radio5">★</label>
+                                </p>
+                            </fieldset>
+                            <div class="modal-footer">
+                                <button type="button" id="c14" class="btn btn-warning btn-lg btn-flex-medio"
+                                    data-dismiss="modal">Calificar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="costo" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">COSTO Y BENEFICIO</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-titulo">
+                                Criterio
+                            </div>
+                            <div class="modal-texto">
+                                    La propuesta tiene un anàlisis de sus costos y beneficios.  
+                            </div>
+                            <fieldset>
+                                <p class="clasificacion">
+                                        <input id="radio6" type="radio" name="estrellas1" value="5">
+                                        <!--
+                                        --><label class="estre" for="radio6">★</label>
+                                        <!--
+                                        --><input id="radio7" type="radio" name="estrellas1" value="4">
+                                        <!--
+                                        --><label class="estre" for="radio7">★</label>
+                                        <!--
+                                        --><input id="radio8" type="radio" name="estrellas1" value="3">
+                                        <!--
+                                        --><label class="estre" for="radio8">★</label>
+                                        <!-- 
+                                         --><input id="radio9" type="radio" name="estrellas1" value="2">
+                                            <!--
+                                        --><label class="estre" for="radio9">★</label>
+                                            <!--
+                                        --><input id="radio10" type="radio" name="estrellas1" value="1">
+                                            <!--
+                                        --><label class="estre" for="radio10">★</label>
+                                </p>
+                              </fieldset>
+                            <div class="modal-footer">
+                                <button type="button" id="c15" class="btn btn-warning btn-lg btn-flex-medio"
+                                    data-dismiss="modal">Calificar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="soluciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">SOLUCIONES SIMILARES</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-titulo">
+                                Criterio
+                            </div>
+                            <div class="modal-texto">
+                                    No existen soluciones similares en el mercado
+                            </div>
+                            <fieldset>
+                                <p class="clasificacion">
+                                        <input id="radio11" type="radio" name="estrellas2" value="5">
+                                        <!--
+                                        --><label class="estre" for="radio11">★</label>
+                                        <!--
+                                        --><input id="radio12" type="radio" name="estrellas2" value="4">
+                                        <!--
+                                        --><label class="estre" for="radio12">★</label>
+                                        <!--
+                                        --><input id="radio13" type="radio" name="estrellas2" value="3">
+                                        <!--
+                                        --><label class="estre" for="radio13">★</label>
+                                        <!- --><input id="radio14" type="radio" name="estrellas2" value="2">
+                                            <!--
+                                        --><label class="estre" for="radio14">★</label>
+                                            <!--
+                                        --><input id="radio15" type="radio" name="estrellas2" value="1">
+                                            <!--
+                                        --><label class="estre" for="radio15">★</label>
+                                </p>
+                            </fieldset>
+                            <div class="modal-footer">
+                                <button type="button" id="c16" class="btn btn-warning btn-lg btn-flex-medio"
+                                    data-dismiss="modal">Calificar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="competencia" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">COMPETENCIA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-titulo">
+                            Criterio
+                        </div>
+                        <div class="modal-texto">
+                                La propuesta es innovadora en relación a la competencia.
+                        </div>
+                        <fieldset>
+                            <p class="clasificacion">
+                                    <input id="radio16" type="radio" name="estrellas3" value="5">
+                                    <!--
+                                    --><label class="estre" for="radio16">★</label>
+                                    <!--
+                                    --><input id="radio17" type="radio" name="estrellas3" value="4">
+                                    <!--
+                                    --><label class="estre" for="radio17">★</label>
+                                    <!--
+                                    --><input id="radio18" type="radio" name="estrellas3" value="3">
+                                    <!--
+                                    --><label class="estre" for="radio18">★</label>
+                                    <!- --><input id="radio19" type="radio" name="estrellas3" value="2">
+                                        <!--
+                                    --><label class="estre" for="radio19">★</label>
+                                        <!--
+                                    --><input id="radio20" type="radio" name="estrellas3" value="1">
+                                        <!--
+                                    --><label class="estre" for="radio20">★</label>
+                            </p>
+                        </fieldset>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning btn-lg btn-flex-medio"
+                                 id="c17" data-dismiss="modal">Calificar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modelo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">MODELO DE NEGOCIO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-titulo">
+                        Criterio
+                    </div>
+                    <div class="modal-texto">
+                            Presenta un modelo de negocio claramente definido ¿Cómo venderá y a quienes venderá el producto?
+                    </div>
+                    <fieldset>
+                        <p class="clasificacion">
+                                <input id="radio21" type="radio" name="estrellas4" value="5">
+                                <!--
+                                --><label class="estre" for="radio21">★</label>
+                                <!--
+                                --><input id="radio22" type="radio" name="estrellas4" value="4">
+                                <!--
+                                --><label class="estre" for="radi022">★</label>
+                                <!--
+                                --><input id="radio23" type="radio" name="estrellas4" value="3">
+                                <!--
+                                --><label class="estre" for="radio23">★</label>
+                                <!-- --><input id="radio24" type="radio" name="estrellas4" value="2">
+                                    <!--
+                                --><label class="estre" for="radio24">★</label>
+                                    <!--
+                                --><input id="radio25" type="radio" name="estrellas4" value="1">
+                                    <!--
+                                --><label class="estre" for="radio25">★</label>
+                        </p>
+                    </fieldset>
+                    <div class="modal-footer">
+                        <button type="button" id="c18" class="btn btn-warning btn-lg btn-flex-medio"
+                            data-dismiss="modal">Calificar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <script src="../external/js/gijgo.min.js"></script>
+    <script src="../external/js/sweetalert2@8.js"></script>
+    <!-- Principal -->
+
+    <script src="../js/mod6/mod2.js"></script>
+
+
+</body>
+
+</html>

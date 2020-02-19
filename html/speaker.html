@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- External -->
+    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+    <!-- JETS -->
+    <link rel="stylesheet" href="../css/speaker.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <!-- Jquery -->
+    <script src="../external/js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+<div class="loader-page"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Speakers</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../indexAdministrador.html"">Inicio <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Speaker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logOut">Salir</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+            
+            <div class="container">
+                  <div class="card text-white card-speaker mb-3 img-card" >
+                  <div class="row">
+                      <div class="col-5">
+                          <div class="card-body hover-card ">
+                              <img class="img-card"
+                              src="../img/EduardoUrzua.PNG" alt="" data-toggle="modal"
+                              data-target="#confer1" aria-expanded="false" aria-controls="collapseExample">
+                          </div>
+                      </div>
+                      <div class="col-7 informacion-speaker" data-toggle="collapse"
+                      data-target="#speak1" aria-expanded="false" aria-controls="collapseExample">
+                          <div>
+                              Eduardo Urzua
+                          </div>
+                          <div>
+                              <p><h6>Director de Incubadoras y Parques Tecnológicos UNAM</h6></p>
+                          </div>
+                      </div>                     
+                  </div>                 
+              </div>
+              <div class="collapse" id="speak1">
+                    <div class="card card-body card-speaker">
+                            
+                                    <div class="form-row ">
+                                      <div class="col-6 separacion">
+                                        <button type="button" id="ins7" class="btn btn-secondary btn-full inscribir" data-toggle="modal"
+                                        data-target="#inscripcion" aria-expanded="false" aria-controls="collapseExample">INSCRIBIR</button>
+                        
+                                      </div>
+                                      <div class="col-6 separacion">
+                                        <button type="button" id="encuesta1" class="btn btn-primary btn-full encuesta">ENCUESTA</button>
+                        
+                                      </div>
+                                    </div>            
+                    </div>
+                </div>
+
+                    <div class="card text-white card-speaker mb-3 img-card">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                src="../img/JorgeRodriguez.PNG" alt="" data-toggle="modal"
+                                data-target="#confer2" aria-expanded="false" aria-controls="collapseExample">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker" data-toggle="collapse"
+                        data-target="#speak2" aria-expanded="false" aria-controls="collapseExample">
+                            <div>
+                                Jorge Rodriguez
+                            </div>
+                            <div>
+                               <p><h6>Director de Credenciales Aternativas del Tecnológico de Monterrey</h6></p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="speak2">
+                        <div class="card card-body card-speaker">
+                                <div class="form-row ">
+                                        <div class="col-6 separacion">
+                                          <button type="button" id="ins3" class="btn btn-secondary btn-full inscribir" data-toggle="modal"
+                                          data-target="#inscripcion" aria-expanded="false" data-id="3" aria-controls="collapseExample">INSCRIBIR</button>
+                          
+                                        </div>
+                                        <div class="col-6 separacion">
+                                          <button type="button" id="encuesta2" class="btn btn-primary btn-full encuesta" data-id="3">ENCUESTA</button>
+                      
+                                        </div>
+                                      </div>
+                        </div>
+                    </div>
+
+
+                <div class="card text-white card-speaker mb-3 img-card">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="card-body hover-card ">
+                            <img class="img-card"
+                            src="../img/KenSinger.PNG" alt="" data-toggle="modal"
+                            data-target="#confer3" aria-expanded="false" aria-controls="collapseExample">
+                        </div>
+                    </div>
+                    <div class="col-7 informacion-speaker"  data-toggle="collapse"
+                    data-target="#speak3" aria-expanded="false" aria-controls="collapseExample">
+                        <div>
+                            Ken Singer
+                        </div>
+                        <div>
+                            
+                        </div>
+                        <div>
+                            <p><h6>Director del Centro para el Emprendimiento y Tecnología de la Universidad de Berkeley</h6></p>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="speak3">
+                    <div class="card card-body card-speaker">
+                            <div class="form-row ">
+                                    <div class="col-6 separacion">
+                                      <button type="button" id="ins5" class="btn btn-secondary btn-full inscribir" data-toggle="modal"
+                                      data-target="#inscripcion" aria-expanded="false" aria-controls="collapseExample">INSCRIBIR</button>
+                      
+                                    </div>
+                                    <div class="col-6 separacion">
+                                      <button type="button" id="encuesta3" class="btn btn-primary btn-full encuesta">ENCUESTA</button>
+                      
+                                    </div>
+                                  </div>
+                    </div>
+                </div>
+
+            <div class="card text-white card-speaker mb-3 img-card">
+            <div class="row">
+                <div class="col-5">
+                    <div class="card-body hover-card ">
+                        <img class="img-card"
+                        src="../img/NaotakaHirami.PNG" alt="" data-toggle="modal"
+                        data-target="#confer4" aria-expanded="false" aria-controls="collapseExample">
+                    </div>
+                </div>
+                <div class="col-7 informacion-speaker" data-toggle="collapse"
+                data-target="#speak4" aria-expanded="false" aria-controls="collapseExample">
+                    <div>
+                        Naotaka Hirami
+                    </div>
+                    <div>
+                        <p><h6>Gerente del centro de investigación colaborativa y cooperativa comunitaria de la Univeridad de Hiroshima</h6></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collapse" id="speak4">
+                <div class="card card-body card-speaker">
+                        <div class="form-row ">
+                                <div class="col-6 separacion">
+                                  <button type="button" id="ins8" class="btn btn-secondary btn-full inscribir" data-toggle="modal"
+                                  data-target="#inscripcion" aria-expanded="false" aria-controls="collapseExample">INSCRIBIR</button>
+                  
+                                </div>
+                                <div class="col-6 separacion">
+                                  <button type="button" id="encuesta4" class="btn btn-primary btn-full encuesta">ENCUESTA</button>
+                  
+                                </div>
+                              </div>
+                </div>
+            </div>
+
+        <div class="card text-white card-speaker mb-3 img-card">
+        <div class="row">
+            <div class="col-5">
+                <div class="card-body hover-card ">
+                    <img class="img-card"
+                    src="../img/RobertoPerez.PNG" alt="" data-toggle="modal"
+                    data-target="#confer5" aria-expanded="false" aria-controls="collapseExample">
+                </div>
+            </div>
+            <div class="col-7 informacion-speaker" data-toggle="collapse"
+            data-target="#speak5" aria-expanded="false" aria-controls="collapseExample">
+                <div>
+                    Roberto Pérez
+                </div>
+                <div>
+                    <p><h6>Consultor de instituciones para el desarrollo de personas y equipos</h6></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="speak5">
+            <div class="card card-body card-speaker">
+                    <div class="form-row ">
+                            <div class="col-6 separacion">
+                              <button type="button" id="inscribir" class="btn btn-secondary btn-full inscribir" data-toggle="modal"
+                              data-target="#inscripcion" aria-expanded="false" aria-controls="collapseExample">INSCRIBIR</button>
+              
+                            </div>
+                            <div class="col-6 separacion">
+                              <button type="button" id="encuesta5" class="btn btn-primary btn-full encuesta">ENCUESTA</button>
+              
+                            </div>
+                          </div>
+            </div>
+        </div>
+    
+<div class="modal fade" id="inscripcion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Inscripción</h5>
+      <button type="button" class="close" id="salir" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <div class="flex-2">
+                <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                
+            </div> -->
+
+      <form>
+        <div class="form-row ">
+          <div class="col-6 separacion">
+            <button type="button" id="scan" class="btn btn-warning btn-full-width">Escanear</button>
+          </div>
+          <div class="col-6 separacion">
+            <input type="text" class="form-control" id="digitos" placeholder="Registro o CI">
+          </div>
+          <div class="col-12 separacion">
+            <button type="button" id="verificar" class="btn btn-primary form-control">Verificar</button>
+            <select name="" id="horario" class="form-control">
+              <option value="">Seleccione el horario</option>
+              <option value="1">08:30</option>
+              <option value="2">09:00</option>
+              <option value="3">10:30</option>
+              <option value="6">15:30</option>
+              <option value="4">16:30</option>
+              <option value="5">19:30</option>
+            
+            </select>
+          </div>
+        </div>
+        <span aria-hidden="true">&times;</span>
+
+        <div class="form-row" >
+          <div class="col-12">
+            <h4 class="car-flex" id="txtRegistro">Registrado: No</h4>
+          </div>
+        </div>
+        <span aria-hidden="true">&times;</span>
+
+        <div class="form-row " id="datos">
+          <div class="col-3 separacion">
+            <label for="name" class="col-form-label">Nombre: </label>
+          </div>
+          <div class="col-9 separacion">
+            <input type="text" class="form-control" placeholder="Nombre" disabled="">
+          </div>
+          <div class="col-3 separacion">
+            <label for="name" class="col-form-label">Paterno: </label>
+          </div>
+          <div class="col-9 separacion">
+            <input type="text" class="form-control" placeholder="Apellido Paterno" disabled="">
+          </div>
+          <div class="col-3 separacion">
+            <label for="name" class="col-form-label">Materno: </label>
+          </div>
+          <div class="col-9 separacion">
+            <input type="text" class="form-control" placeholder="Apellido Materno" disabled="">
+          </div>
+          <div class="col-3 separacion">
+            <label for="name" class="col-form-label">CI: </label>
+          </div>
+          <div class="col-9 separacion">
+            <input type="text" class="form-control" placeholder="CI" disabled="">
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="modal-footer ">
+      <button type="button" class="btn btn-secondary btn-2" data-dismiss="modal" id="cancel">Cancelar</button>
+      <button type="button" id="reg" class="btn btn-primary btn-2">Registrar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="confer1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Eduardo Urzua</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <div class="flex-2">
+                <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                
+            </div> -->
+
+      <form>
+        <div class="form-row" >
+        </div>
+                <img class="modal-img"
+                src="../img/speak1.jpg" alt="">
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="confer2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Jorge Rodriguez</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <div class="flex-2">
+                <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                
+            </div> -->
+
+      <form>
+        <div class="form-row" >
+        </div>
+                <img class="modal-img"
+                src="../img/speak2.jpeg" alt="">
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="confer3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Ken Singer</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <div class="flex-2">
+                <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                
+            </div> -->
+
+      <form>
+        <div class="form-row" >
+        </div>
+                <img class="modal-img"
+                src="../img/speak3.png" alt="">
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="confer4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Naotaka Hirami</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <div class="flex-2">
+                <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                
+            </div> -->
+
+      <form>
+        <div class="form-row" >
+        </div>
+                <img class="modal-img"
+                src="../img/speak4.png" alt="">
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="confer5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Roberto Pérez</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <div class="flex-2">
+                <button type="button" class="btn btn-warning btn-2">Escanear</button>
+                
+            </div> -->
+
+      <form>
+        <div class="form-row" >
+        </div>
+                <img class="modal-img"
+                src="../img/speak5.png" alt="">
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>        
+       <!--<div class="container-nav">
+            <div class="speaker">
+                <div class="card text-white card-speaker mb-3 img-card" data-toggle="collapse"
+                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                src="../img/EduardoUrzua.PNG" alt="">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker">
+                            <div>
+                                carlos Molina
+                            </div>
+                            <div>
+                                BP EXperience y Think de IZO
+                            </div>
+                            <div>
+                                Mas Informacion
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body card-speaker">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur beatae aliquid reiciendis
+                        tempora alias quos dolores enim sunt vitae laboriosam.
+                    </div>
+                </div>                 
+            <div class="modal-body">
+                <div class="card text-white card-speaker mb-3 img-card" data-toggle="collapse"
+                    data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                    src="../img/JorgeRodriguez.PNG" alt="">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker">
+                            <div>
+                                carlos Molina
+                            </div>
+                            <div>
+                                BP EXperience y Think de IZO
+                            </div>
+                            <div>
+                                Mas Informacion
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="collapse" id="collapseExample1">
+                        <div class="card card-body card-speaker">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur beatae aliquid reiciendis
+                            tempora alias quos dolores enim sunt vitae laboriosam.
+                        </div>
+                    </div>
+                    
+                <div class="card text-white card-speaker mb-3 img-card" data-toggle="collapse"
+                    data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                    src="../img/KenSinger.PNG" alt="">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker">
+                            <div>
+                                carlos Molina
+                            </div>
+                            <div>
+                                BP EXperience y Think de IZO
+                            </div>
+                            <div>
+                                Mas Informacion
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+                <div class="collapse" id="collapseExample2">
+                        <div class="card card-body card-speaker">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur beatae aliquid reiciendis
+                            tempora alias quos dolores enim sunt vitae laboriosam.
+                        </div>
+                    </div>
+                <div class="card text-white card-speaker mb-3 img-card" data-toggle="collapse"
+                    data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                    src="../img/NaotakaHirami.PNG" alt="">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker">
+                            <div>
+                                carlos Molina
+                            </div>
+                            <div>
+                                BP EXperience y Think de IZO
+                            </div>
+                            <div>
+                                Mas Informacion
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+                <div class="collapse" id="collapseExample3">
+                        <div class="card card-body card-speaker">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur beatae aliquid reiciendis
+                            tempora alias quos dolores enim sunt vitae laboriosam.
+                        </div>
+                    </div>
+                <div class="card text-white card-speaker mb-3 img-card" data-toggle="collapse"
+                    data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                    src="../img/RobertoPerez.PNG" alt="">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker">
+                            <div>
+                                carlos Molina
+                            </div>
+                            <div>
+                                BP EXperience y Think de IZO
+                            </div>
+                            <div>
+                                Mas Informacion
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+                <div class="collapse" id="collapseExample4">
+                        <div class="card card-body card-speaker">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur beatae aliquid reiciendis
+                            tempora alias quos dolores enim sunt vitae laboriosam.
+                        </div>
+                    </div>
+                <div class="card text-white card-speaker mb-3 img-card" data-toggle="collapse"
+                    data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card-body hover-card ">
+                                <img class="img-card"
+                                    src="../img/foto.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-7 informacion-speaker">
+                            <div>
+                                carlos Molina
+                            </div>
+                            <div>
+                                BP EXperience y Think de IZO
+                            </div>
+                            <div>
+                                Mas Informacion
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+                <div class="collapse" id="collapseExample5">
+                        <div class="card card-body card-speaker">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur beatae aliquid reiciendis
+                            tempora alias quos dolores enim sunt vitae laboriosam.
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+    </div> --> 
+    </main>
+
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <!-- Principal -->
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script src="../js/principal.js"></script>
+    <!-- <script>
+    document.querySelector('#encuesta').addEventListener('click', () => {
+      location.href = "./encuestas.html"
+    })
+    </script> -->
+    <script src="../js/verificacionSpeaker.js"></script>
+    <script src="../js/conexion/conexion.js"></script>
+    <script src="../js/mod5/InterfaceE.js"></script>
+    <script src="../js/mod5/appE.js"></script>
+</body>
+
+</html>

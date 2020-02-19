@@ -1,0 +1,162 @@
+:root {
+    --color-fondo : rgba(0, 0, 0, 0.8);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+    /* background-image: url(../img/Arte\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    background-image: url(../img/fondo.jpg);
+    background-size: contain;    
+}
+
+.badge-down {
+border-radius: 0 0px 5px 5px;
+}
+
+
+.video {
+    height: 30vh;
+}
+
+.car-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.car-flex-rigth{
+    display: flex;
+    justify-content: center;
+}
+
+.card-button {
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px -5px  rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    background-image: url(../img/75.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reg {
+    background-image: url(../img/75.jpg) ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-verde {
+    background-color: rgba(8, 187, 8 , .8) !important;
+}
+
+.card-button:active {
+    box-shadow: none;
+    text-shadow: 1px 1px 6px #fff;
+    top: 2px;
+    left: 2px;
+}
+
+.card-body {
+    margin: -5px;
+}
+a
+.separacion {
+    padding: 0.3rem .8rem;
+}
+
+/* [class^="flex-"] {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+} */
+
+.btn-full-width {
+    width: 100%;
+}
+
+.btn-2 {
+    width: 50%;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.blanco {
+    color: white;
+  
+
+}
+
+.icon {
+    height: 40px;
+
+    margin-bottom: .3rem;
+}
+
+.borrar-bagde{
+    opacity: 0;
+}
+
+label {
+    color: hsla(110, 100%, 100%, .8);   
+}
+
+.breadcrumb {
+    background-color: rgba(41, 40, 40, 0.0)
+}
+
+.carousel-item {
+    border-radius: 5px;
+}
+
+tr {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#credencial{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+    margin-bottom: 7px;
+}
+#reg{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+}
+#verificar{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+    margin-top: 7px;
+}
+#verificarM{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+    margin-top: 7px;
+}
+#scan{
+    background-color: rgba(85, 87, 89, 1);
+    border-color:rgba(85, 87, 89, 1);
+}
+#Entregas{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+}
+#crear{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+}
+#credencial{
+    background-color: rgba(207, 10, 44, 1);
+    border-color: rgba(207, 10, 44, 1);
+    margin-bottom: 7px;
+}

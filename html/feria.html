@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JETS</title>
+    <!-- External -->
+    <link rel="stylesheet" href="../external/css/gijgo.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+
+    <!-- JETS -->
+    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/feria.css">
+    <link rel="stylesheet" href="../css/feria3.css">
+    <link rel="stylesheet" href="../css/calificacion.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <!-- <link rel="stylesheet" href="./css/cronograma.css"> -->
+    <!-- Jquery -->
+    <script src="../external/js/jquery-3.4.1.min.js"></script>
+    <!-- jspdf nesesario -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.0.2/base64.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+</head>
+
+<body>
+<div class="loader-page"></div>   
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">FERIA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../indexAdministrador.html"">Inicio <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Speaker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logOut">Salir</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title">Calificaciones</h4>
+                    <div class="ml-auto text-right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="form-group row">
+                <div class="col-sm-4 text-center ">
+
+                    <div data-role="main" class="ui-content ">
+
+                        <p>
+                            <a style="text-decoration: none" id="scan"><button
+                                    class="btn btn-warning btn-lg btn-flex-medio">Scan</button></a>
+                        </p>
+                        <p>
+                           <input type="text" id="codigo" class="">
+                           
+                           <a style="text-decoration: none" id="verificar"><button
+                            class="btn btn-warning btn-lg btn-flex-medio">Verificar</button></a>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div id="contenido" class="col-lg-12" style="display: block;">
+                    <div class="col-lg-12" id="nameGrup" style="display: block;">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group row" id="grupoName">
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+
+                <hr>
+                <div class="container" id="rubrica" style="display: none;">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12 col-xlg-12">
+                            <div class="card text-white bg-secondary card-button reg" id="propuesta">
+                                <div class="card-body">
+                                    <div class="car-flex">
+                                        <img class="icon" src="../external/icons/feria.png"  alt="" srcset=""></a>
+                                    </div>
+                                    <p class="card-text car-flex">PROPUESTA</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-12 col-lg-12 col-xlg-12">
+                            <div class="card text-white bg-secondary card-button reg" id="emprendimiento">
+                                <div class="card-body">
+                                    <div class="car-flex">
+                                        <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                    </div>
+                                    <p class="card-text car-flex">EMPRENDIMIENTO</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-12 col-lg-12 col-xlg-12">
+                            <div class="card text-white bg-secondary card-button reg" id="presentacion">
+                                <div class="card-body">
+                                    <div class="car-flex">
+                                        <img class="icon" src="../external/icons/feria.png" alt="" srcset=""></a>
+                                    </div>
+                                    <p class="card-text car-flex">PRESENTACIÓN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4 text-center " id="guardar" style="display: none">
+
+                <div data-role="main" class="ui-content ">
+
+                    <p>
+                        <a style="text-decoration: none" id="guardar"><button
+                                class="btn btn-warning btn-lg btn-flex-medio">Guardar</button></a>
+                    </p>
+
+                </div>
+            </div>
+            <!-- <button>Guardar</button> -->
+
+    </main>
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <script src="../external/js/gijgo.min.js"></script>
+    <script src="../external/js/sweetalert2@8.js"></script>
+    <!-- Principal -->
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script src="../js/index.js"></script>
+    <!-- <script src="../js/encuesta.js"></script> -->
+    <script src="../js/principal.js"></script>
+
+    <!-- <script src="./js/mod3/interfaceM.js"></script>
+    <script src="./js/mod3/appM.js"></script> -->
+
+    <script src="../js/conexion/conexion.js"></script>
+    <script src="../js/mod4/interfaceC.js"></script>
+    <script src="../js/mod4/appC.js"></script>
+
+</body>
+
+</html>
